@@ -9,6 +9,7 @@ public struct Ability //struc cünkü sadece data container olarak kullanýlacak
     [TextArea(0, 1)] public string Description;
 }
 
+
 public enum AbilityType
 {
     nonType = 0, // nonType, dummy abilitlerde kullanmak için dursun.

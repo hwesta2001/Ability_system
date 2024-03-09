@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 369494203131702529}
-  - component: {fileID: 2109804032896871792}
+  - component: {fileID: 3510850972205892884}
   m_Layer: 0
-  m_Name: Heal Player large
+  m_Name: Stun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32,7 +32,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2109804032896871792
+--- !u!114 &3510850972205892884
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,18 +41,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 7555408481043076298}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb31de7efe3e45d43936ba8c0ddecc65, type: 3}
+  m_Script: {fileID: 11500000, guid: 9265b686823ae124ab8b450edb32cfa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   <Ability_>k__BackingField:
-    Icon: {fileID: 21300000, guid: 12e042c29b662e14f9923f0ca038266d, type: 3}
-    Name: Big Heal
-    Type: 2
-    Description: Heals player 50 point
+    Icon: {fileID: 21300000, guid: ec063da0493ef66439897c06ce7099f5, type: 3}
+    Name: Stun
+    Type: 0
+    Description: Stuns unit
   <AdaptorArg>k__BackingField:
     armorValue: 0
-    healValue: 50
+    healValue: 0
     attackValue: 0
     attackSpeedValue: 0
     rangeValue: 0
-    moveSpeedValue: 0
+    moveSpeedValue: -99999

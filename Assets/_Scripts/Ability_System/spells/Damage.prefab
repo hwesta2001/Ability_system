@@ -46,6 +46,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Ability_>k__BackingField:
     Icon: {fileID: 21300000, guid: 18270dd971a6c494983e0a89e624ed1e, type: 3}
-    Name: 'Fire '
+    Name: Damage
     Type: 2
-    Description: Fire damage to target.
+    Description: Damage player 10 point
+  <AdaptorArg>k__BackingField:
+    armorValue: 0
+    healValue: -10
+    attackValue: 0
+    attackSpeedValue: 0
+    rangeValue: 0
+    moveSpeedValue: 0

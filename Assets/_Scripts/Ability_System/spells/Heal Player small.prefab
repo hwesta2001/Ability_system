@@ -45,8 +45,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Ability_>k__BackingField:
-    Icon: {fileID: 21300000, guid: 11dc024438a997d4288169c1c0b6ae21, type: 3}
-    Name: Heal Player
+    Icon: {fileID: 21300000, guid: 392b037abb8da7349b678d66e70a2dda, type: 3}
+    Name: Heal
     Type: 2
-    Description: Heals player
-  HealAmount: 10
+    Description: Heals player 10 point
+  <AdaptorArg>k__BackingField:
+    armorValue: 0
+    healValue: 10
+    attackValue: 0
+    attackSpeedValue: 0
+    rangeValue: 0
+    moveSpeedValue: 0
