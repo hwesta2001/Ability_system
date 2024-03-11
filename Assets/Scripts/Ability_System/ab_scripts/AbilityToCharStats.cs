@@ -1,31 +1,23 @@
-using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-//static singelton da yapýlabilir
-//Suan bir gameObjecte konulup gerekli yerlere çekerek kullanýyoruz
-public class AbilityStatsAdaptor : MonoBehaviour
+public class AbilityToCharStats : MonoBehaviour
 {
-    // bu eventi dinlemek için OnAgilityTriggered  event'ine üye olunur
-    // örnek: abilityStatsAdaptor.OnAgilityTriggered+= SomeListenerMethod;
-    public event EventHandler<AbilityToStatArgs> OnAgilityTriggered;
-    CharacterStats characterStats;
-    public void AgilityTrigger(object o, AbilityToStatArgs args)
-    {
-        // void AgilityTrigger methodu AbilitySisteminde buttona týklayýnca çaðrýlýr.
-        OnAgilityTriggered?.Invoke(o, args);
-    }
+    [SerializeField] AbilityStatsAdaptor adaptor;
+    [SerializeField] CharacterStats characterStats;
     WaitForSeconds waitForSecond;
+
     void Start()
     {
-        characterStats = CharacterStats.Instance;
-        OnAgilityTriggered = null;
-        OnAgilityTriggered += DetermineModifier;
+        if (characterStats == null) characterStats = CharacterStats.Instance;
+        if (adaptor == null) adaptor = FindFirstObjectByType<AbilityStatsAdaptor>();
+        adaptor.OnAgilityTriggered += DetermineAndAddModifier;
     }
 
-    void DetermineModifier(object o, AbilityToStatArgs args)
+    void DetermineAndAddModifier(object o, AbilityToStatArgs args)
     {
-        switch (args.statsContextType)
+        switch (args.statsContextType) 
         {
             case PlayerStatContextType.Health:
                 characterStats._healthPoint.AddModifier(args.modifier);
@@ -80,15 +72,3 @@ public class AbilityStatsAdaptor : MonoBehaviour
         characterStats.StatsMassCalculation();
     }
 }
-
-[Serializable]
-public class AbilityToStatArgs : EventArgs
-{
-    // Buttonla triger olunca bu Arg'lar eventa gönderilir.
-
-    public float buffTime = 0f; // spelller için sýfýrdýr.
-    public PlayerStatContextType statsContextType;
-    public Modifier modifier;
-}
-
-public enum PlayerStatContextType { Health, Armor, Damage, AttackSpeed, } //diðer gerekli tipler eklenir.

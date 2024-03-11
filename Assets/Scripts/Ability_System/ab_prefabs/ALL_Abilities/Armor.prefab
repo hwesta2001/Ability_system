@@ -51,7 +51,7 @@ MonoBehaviour:
     Description: Adds 10 armor
   <AdaptorArg>k__BackingField:
     buffTime: 5
-    playerModifierType: 1
+    statsContextType: 1
     modifier:
       modifierBaseValue: 10
       ModifierType: 0
