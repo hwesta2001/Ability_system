@@ -6,6 +6,7 @@ public class AbilityToCharStats : MonoBehaviour
 {
     [SerializeField] AbilityStatsAdaptor adaptor;
     [SerializeField] CharacterStats characterStats;
+   
     WaitForSeconds waitForSecond;
 
     void Start()
@@ -40,6 +41,8 @@ public class AbilityToCharStats : MonoBehaviour
         if (args.buffTime > 0)
         {
             // task asyn ile deðiþebilr.
+            // custom yield consturucture araþtýr.
+            // while ile oluþtur.
             waitForSecond = new WaitForSeconds(args.buffTime);
             StartCoroutine(RemoveBuffAfterTime(args));
         }

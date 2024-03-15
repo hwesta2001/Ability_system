@@ -10,9 +10,12 @@ public class StatContext
     public float StatLevel;
     [SerializeField] float _bakedValue;
 
-    public DirectModifierContainer DirectModifierContainer;
-    public AdditivePercentageModifierContainer AdditivePercentageModifierContainer;
-    public CumulativePercentageModifierContainer CumulativeModifierContainer;
+    public DirectModifierContainer DirectModifierContainer = new();
+    public AdditivePercentageModifierContainer AdditivePercentageModifierContainer = new();
+    public CumulativePercentageModifierContainer CumulativeModifierContainer = new();
+    // Yosha blosh factory method
+
+
 
     //[ContextMenu("Calculate Total Impact")]
     private void CalculateTotalModifierImpact()

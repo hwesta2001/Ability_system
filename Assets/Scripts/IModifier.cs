@@ -34,7 +34,7 @@ public class LevelModifier : IModifier
 public abstract class IModifierContainer
 {
     //Concrete Modifier Iceren Abstract Modifier Container Class.
-    public List<Modifier> modifiers;
+    public List<Modifier> modifiers = new();
     public void Add(Modifier modifier)
     {
         modifiers.Add(modifier);

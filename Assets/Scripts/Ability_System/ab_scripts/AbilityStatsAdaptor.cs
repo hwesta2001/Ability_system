@@ -31,4 +31,4 @@ public class AbilityToStatArgs : EventArgs
     public Modifier modifier;
 }
 
-public enum PlayerStatContextType { Health, Armor, Damage, AttackSpeed, } //diðer gerekli tipler eklenir.
+public enum PlayerStatContextType { Health, Armor, Damage, Range, AttackSpeed, } //diðer gerekli tipler eklenir.

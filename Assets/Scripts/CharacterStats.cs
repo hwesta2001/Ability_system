@@ -44,13 +44,27 @@ public class CharacterStats : MonoBehaviour
 
     }
 
+    private void Start()
+    {
+        StatContext physicalDamage = new();
+        physicalDamage.SetBakedValue(0);
+        TakePhysicalDamage(physicalDamage);
+    }
 
     #region Hasan Yýlmaz tarafýndan eklenenler 
     //-------------------------------------------------------------------
     public void StatsMassCalculation()
     {
-        GetPhysicalArmorReduction();
-        GetEffectiveHealthByPhysicalArmor();
+
+        //_healthPointCurrentAt = ScaleHealthPointAt(_healthPoint.GetBakedValue(), _healthPointBakedPrevious, _healthPointCurrentAt);
+        //_healthPointBakedPrevious = _healthPoint.GetBakedValue();
+
+        //StatContext physicalDamage = new();
+        //physicalDamage.SetBakedValue(0);
+        //TakePhysicalDamage(physicalDamage);
+
+        //GetPhysicalArmorReduction();
+        //GetEffectiveHealthByPhysicalArmor();
         // diðer Stats hesaplama metotlarý buraya eklenir.
     }
     //--------------------------------------------------------------------

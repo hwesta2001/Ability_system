@@ -13,9 +13,11 @@ MonoBehaviour:
   m_Name: _ab_cont_lvl_1to10
   m_EditorClassIdentifier: 
   AbilityContainerInfo: This contianer carries... level abilities
-  onValidateAutoGetAllinFolder: 1
+  onValidateAutoGetAllinFolder: 0
   abilities:
   - {fileID: 6529040523906908601, guid: 412915ae8ab834644b2dc73edd76e014, type: 3}
   - {fileID: -1516102767296976042, guid: aef4af10c32fa414795332dbd9b0221a, type: 3}
   - {fileID: 2109804032896871792, guid: 68e03b66155b6ba49a0d610e52c760eb, type: 3}
   - {fileID: 3510850972205892884, guid: 0a6f5f1bcfe0ddd489936bbd4defc81c, type: 3}
+  - {fileID: 6529040523906908601, guid: 412915ae8ab834644b2dc73edd76e014, type: 3}
+  - {fileID: 2109804032896871792, guid: 68e03b66155b6ba49a0d610e52c760eb, type: 3}

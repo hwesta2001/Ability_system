@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 369494203131702529}
-  - component: {fileID: 3510850972205892884}
+  - component: {fileID: 2109804032896871792}
   m_Layer: 0
-  m_Name: Stun
+  m_Name: Heal Player small 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32,7 +32,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3510850972205892884
+--- !u!114 &2109804032896871792
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,17 +41,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 7555408481043076298}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9265b686823ae124ab8b450edb32cfa0, type: 3}
+  m_Script: {fileID: 11500000, guid: fb31de7efe3e45d43936ba8c0ddecc65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   <Ability_>k__BackingField:
-    Icon: {fileID: 21300000, guid: ec063da0493ef66439897c06ce7099f5, type: 3}
-    Name: Stun
-    Type: 4
-    Description: Stuns unit
+    Icon: {fileID: 21300000, guid: 392b037abb8da7349b678d66e70a2dda, type: 3}
+    zorlukOrani: 19
+    "aral\u0131k": {x: 81, y: 100}
+    Name: Heal
+    Type: 2
+    Description: Heals player 10 point
   <AdaptorArg>k__BackingField:
-    buffTime: 5
+    buffTime: 0
     statsContextType: 0
     modifier:
-      modifierBaseValue: -9999999
+      modifierBaseValue: 10
       ModifierType: 0

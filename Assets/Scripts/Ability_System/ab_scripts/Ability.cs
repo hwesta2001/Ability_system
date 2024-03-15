@@ -4,6 +4,8 @@ using UnityEngine;
 public struct Ability //struc cünkü sadece data container olarak kullanýlacak
 {
     public Sprite Icon;
+    [Range(0, 100)] public int zorlukOrani;
+    public Vector2Int aralýk;
     public string Name;
     public AbilityType Type;
     [TextArea(0, 1)] public string Description;

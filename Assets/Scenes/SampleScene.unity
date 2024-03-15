@@ -740,6 +740,7 @@ GameObject:
   m_Component:
   - component: {fileID: 390634661}
   - component: {fileID: 390634660}
+  - component: {fileID: 390634662}
   m_Layer: 0
   m_Name: AbilityStatsAdaptor
   m_TagString: Untagged
@@ -774,6 +775,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &390634662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 390634659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eace8547404d57e4198982d7eab30dc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  adaptor: {fileID: 390634660}
+  characterStats: {fileID: 934707697}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1112,22 +1127,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 543cbcbac44546749a68c139c9ce3b24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _physicalDamageReduction: 0.375
-  _effectiveHealthPointByPhysicalReduction: 80
+  _physicalDamageReduction: 0
+  _effectiveHealthPointByPhysicalReduction: 100
   _healthPointBakedPrevious: 0
   _healthPointCurrentAt: 0
   _healthPoint:
-    StatLevel: 50
-    _bakedValue: 50
+    StatLevel: 100
+    _bakedValue: 100
     DirectModifierContainer:
-      modifiers: []
+      modifiers:
+      - modifierBaseValue: 50
+        ModifierType: 0
     AdditivePercentageModifierContainer:
       modifiers: []
     CumulativeModifierContainer:
       modifiers: []
   _physicalArmor:
-    StatLevel: 10
-    _bakedValue: 10
+    StatLevel: 0
+    _bakedValue: 0
     DirectModifierContainer:
       modifiers: []
     AdditivePercentageModifierContainer:
@@ -3738,8 +3755,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2811941813752004891}
   m_HandleRect: {fileID: 3868589240254408528}
   m_Direction: 0
-  m_Value: 0.000000216695
-  m_Size: 0.7516191
+  m_Value: 0
+  m_Size: 0.75161904
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -4506,18 +4523,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a15a91db685be8409725d86081ae25c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AllAbilitiesContainer: {fileID: 11400000, guid: 6b1f3e8b02ad5c644a0aa7bdd7b18b24, type: 2}
+  AllAbilitiesContainer: {fileID: 11400000, guid: c7b3fcfb13e4a1d4daf6dbeb00b18116, type: 2}
   nontypeAbilities: []
   Upgrades: []
   Spells:
-  - {fileID: -1516102767296976042, guid: 589dbb3613da49542842712b40bed629, type: 3}
-  - {fileID: 2109804032896871792, guid: 17c675205e8d09741ab031039b626501, type: 3}
-  - {fileID: 2109804032896871792, guid: b4664e6a13fecfb4a9539db16b4bf15a, type: 3}
+  - {fileID: -1516102767296976042, guid: aef4af10c32fa414795332dbd9b0221a, type: 3}
+  - {fileID: 2109804032896871792, guid: 68e03b66155b6ba49a0d610e52c760eb, type: 3}
+  - {fileID: 2109804032896871792, guid: 68e03b66155b6ba49a0d610e52c760eb, type: 3}
   Buffs:
-  - {fileID: 6529040523906908601, guid: 267eb3259de9b8048ae0c7454f39b83f, type: 3}
+  - {fileID: 6529040523906908601, guid: 412915ae8ab834644b2dc73edd76e014, type: 3}
+  - {fileID: 6529040523906908601, guid: 412915ae8ab834644b2dc73edd76e014, type: 3}
   Curses:
-  - {fileID: 3510850972205892884, guid: cdf56b1d25c843e438536e22909c2097, type: 3}
-  totalAbilityCount: 5
+  - {fileID: 3510850972205892884, guid: 0a6f5f1bcfe0ddd489936bbd4defc81c, type: 3}
+  totalAbilityCount: 11
 --- !u!1 &8031841595056123336
 GameObject:
   m_ObjectHideFlags: 0
