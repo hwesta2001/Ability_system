@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Ab_Damage : AbilityBehaviour
+public class Ab_Attack : AbilityBehaviour
 {
     public override void OnAbilityTrigger()
     {

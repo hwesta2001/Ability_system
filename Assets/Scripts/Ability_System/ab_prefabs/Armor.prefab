@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 369494203131702529}
-  - component: {fileID: 2109804032896871792}
+  - component: {fileID: 6529040523906908601}
   m_Layer: 0
-  m_Name: Heal Player small 1
+  m_Name: Armor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32,7 +32,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2109804032896871792
+--- !u!114 &6529040523906908601
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,19 +41,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 7555408481043076298}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb31de7efe3e45d43936ba8c0ddecc65, type: 3}
+  m_Script: {fileID: 11500000, guid: f9a5d34f62dde534ab91872d5b3b5909, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <Ability_>k__BackingField:
-    Icon: {fileID: 21300000, guid: 392b037abb8da7349b678d66e70a2dda, type: 3}
-    zorlukOrani: 53
-    "aral\u0131k": {x: 101, y: 146}
-    Name: Heal
-    Type: 2
-    Description: Heals player 10 point
-  <AdaptorArg>k__BackingField:
-    buffTime: 0
-    statsContextType: 0
-    modifier:
-      modifierBaseValue: 10
-      ModifierType: 0
+  Ability_:
+    Name: Armor
+    Type: 1
+    cost: 5
+    currentTotal: 0
+    Description: Adds Armor
+    abButton: {fileID: 0}
+    <AdaptorArg>k__BackingField:
+      buffTime: 0
+      statsContextType: 1
+      modifier:
+        modifierBaseValue: 0.5
+        ModifierType: 0

@@ -3,8 +3,7 @@ using UnityEngine;
 [System.Serializable]
 public abstract class AbilityBehaviour : MonoBehaviour
 {
-    [field: SerializeField] public Ability Ability_ { get; private set; }
-    [field: SerializeField] public AbilityToStatArgs AdaptorArg { get; private set; }
+    public Ability Ability_;
     public abstract void OnAbilityTrigger();
     public abstract void OnUpdate();
 

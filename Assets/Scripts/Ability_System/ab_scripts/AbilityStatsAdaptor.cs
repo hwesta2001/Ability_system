@@ -13,6 +13,7 @@ public class AbilityStatsAdaptor : MonoBehaviour
     {
         // void AgilityTrigger methodu AbilitySisteminde buttona týklayýnca çaðrýlýr.
         OnAgilityTriggered?.Invoke(o, args);
+        Debug.Log("<color=orange> AbilityTriggered with this agrs:\n</color>" + args.statsContextType + " :   " + args.modifier.modifierBaseValue);
     }
 
     void Awake()
@@ -26,7 +27,7 @@ public class AbilityToStatArgs : EventArgs
 {
     // Buttonla triger olunca bu Arg'lar eventa gönderilir.
 
-    public float buffTime = 0f; // spelller için sýfýrdýr.
+    public float buffTime = 0f; // 0 kalýcý olarak ekler
     public PlayerStatContextType statsContextType;
     public Modifier modifier;
 }

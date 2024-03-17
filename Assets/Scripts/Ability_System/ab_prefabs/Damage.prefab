@@ -44,16 +44,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3fbd1ae3aa953e419dbd472cb918034, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <Ability_>k__BackingField:
-    Icon: {fileID: 21300000, guid: 18270dd971a6c494983e0a89e624ed1e, type: 3}
-    zorlukOrani: 13
-    "aral\u0131k": {x: 51, y: 64}
+  Ability_:
     Name: Damage
-    Type: 2
-    Description: Damage player 10 point
-  <AdaptorArg>k__BackingField:
-    buffTime: 0
-    statsContextType: 0
-    modifier:
-      modifierBaseValue: -10
-      ModifierType: 0
+    Type: 0
+    cost: 5
+    currentTotal: 1
+    Description: Adds Damage
+    abButton: {fileID: 0}
+    <AdaptorArg>k__BackingField:
+      buffTime: 0
+      statsContextType: 2
+      modifier:
+        modifierBaseValue: 1
+        ModifierType: 0
