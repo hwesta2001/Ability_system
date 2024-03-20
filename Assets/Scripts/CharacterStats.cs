@@ -10,6 +10,7 @@ public class CharacterStats : MonoBehaviour
 
     [SerializeField] public StatContext _healthPoint;
     [SerializeField] public StatContext _physicalArmor;
+    [SerializeField] public StatContext _magicArmor;
 
     IEffectiveHpCalculator _effective_hp_by_physical_reduction = new GetEffectiveHpByPhysicalArmor();
     IArmorReduction _armor_reduction_by_physical = new WarCraftStylePhysicalArmorReduction();

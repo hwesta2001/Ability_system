@@ -47,7 +47,7 @@ MonoBehaviour:
   Ability_:
     Name: Armor
     Type: 1
-    cost: 5
+    cost: 10
     currentTotal: 0
     Description: Adds Armor
     abButton: {fileID: 0}
