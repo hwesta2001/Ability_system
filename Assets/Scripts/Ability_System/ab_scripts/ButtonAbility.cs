@@ -21,8 +21,8 @@ public class ButtonAbility : MonoBehaviour
     {
         gameObject.name = ability.Name;
         ab_name.text = ability.Name;
-        ab_total_text.text = ability.currentTotal.ToString();
-        cost_text.text = ability.cost.ToString();
+        ab_total_text.text = ability.currentTotalStatCount.ToString();
+        cost_text.text = ability.starPointCost.ToString();
     }
 
     public void SetButonListeners(AbilityBehaviour abilityBehaviour, Action func)

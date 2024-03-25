@@ -47,13 +47,12 @@ MonoBehaviour:
   Ability_:
     Name: Damage
     Type: 0
-    cost: 5
-    currentTotal: 1
-    Description: Adds Damage
+    Description: adds Damage
     abButton: {fileID: 0}
-    <AdaptorArg>k__BackingField:
-      buffTime: 0
-      statsContextType: 2
-      modifier:
-        modifierBaseValue: 1
-        ModifierType: 0
+    statsContextType: 2
+    modifier:
+      modifierBaseValue: 1
+      ModifierType: 0
+    starPointCost: 1
+    currentTotalStatCount: 6
+    buffTime: 0

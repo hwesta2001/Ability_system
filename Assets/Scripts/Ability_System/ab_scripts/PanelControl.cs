@@ -11,6 +11,4 @@ public class PanelControl : MonoBehaviour
         attackPanel.SetActive(true);
         defencePanel.SetActive(false);
     }
-
-
 }

@@ -47,13 +47,12 @@ MonoBehaviour:
   Ability_:
     Name: Armor
     Type: 1
-    cost: 10
-    currentTotal: 0
-    Description: Adds Armor
+    Description: adds Armor
     abButton: {fileID: 0}
-    <AdaptorArg>k__BackingField:
-      buffTime: 0
-      statsContextType: 1
-      modifier:
-        modifierBaseValue: 0.5
-        ModifierType: 0
+    statsContextType: 1
+    modifier:
+      modifierBaseValue: 1
+      ModifierType: 0
+    starPointCost: 5
+    currentTotalStatCount: 1
+    buffTime: 0

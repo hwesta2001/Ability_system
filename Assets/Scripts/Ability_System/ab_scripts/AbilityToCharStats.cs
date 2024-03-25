@@ -18,13 +18,13 @@ public class AbilityToCharStats : MonoBehaviour
 
     void DetermineAndAddModifier(object o, AbilityToStatArgs args)
     {
-        switch (args.statsContextType) 
+        switch (args.ability_arg.statsContextType) 
         {
             case PlayerStatContextType.Health:
-                characterStats._healthPoint.AddModifier(args.modifier);
+                characterStats._healthPoint.AddModifier(args.ability_arg.modifier);
                 break;
             case PlayerStatContextType.Armor:
-                characterStats._physicalArmor.AddModifier(args.modifier);
+                characterStats._physicalArmor.AddModifier(args.ability_arg.modifier);
                 break;
             case PlayerStatContextType.Damage:
 
@@ -38,12 +38,12 @@ public class AbilityToCharStats : MonoBehaviour
         // characterStats.STATS_HESAPLA BURDA
         characterStats.StatsMassCalculation();
 
-        if (args.buffTime > 0)
+        if (args.ability_arg.buffTime > 0)
         {
             // task asyn ile deðiþebilr.
             // custom yield consturucture araþtýr.
             // while ile oluþtur.
-            waitForSecond = new WaitForSeconds(args.buffTime);
+            waitForSecond = new WaitForSeconds(args.ability_arg.buffTime);
             StartCoroutine(RemoveBuffAfterTime(args));
         }
 
@@ -53,13 +53,13 @@ public class AbilityToCharStats : MonoBehaviour
     {
         // remove buff form list
         yield return waitForSecond;
-        switch (args.statsContextType)
+        switch (args.ability_arg.statsContextType)
         {
             case PlayerStatContextType.Health:
-                characterStats._healthPoint.RemoveModifier(args.modifier);
+                characterStats._healthPoint.RemoveModifier(args.ability_arg.modifier);
                 break;
             case PlayerStatContextType.Armor:
-                characterStats._physicalArmor.RemoveModifier(args.modifier);
+                characterStats._physicalArmor.RemoveModifier(args.ability_arg.modifier);
                 break;
             case PlayerStatContextType.Damage:
 

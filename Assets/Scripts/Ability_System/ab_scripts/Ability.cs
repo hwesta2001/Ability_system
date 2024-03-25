@@ -2,15 +2,19 @@ using UnityEngine;
 using UnityEngine.UI;
 
 [System.Serializable]
-public struct Ability //struc cünkü sadece data container olarak kullanýlacak
+public class Ability
 {
     public string Name;
     public AbilityType Type;
-    public int cost;
-    public int currentTotal;
     [TextArea(0, 1)] public string Description;
     public ButtonAbility abButton;
-    [field: SerializeField] public AbilityToStatArgs AdaptorArg { get; private set; }
+    [Header("Args")]
+    public PlayerStatContextType statsContextType;
+    public Modifier modifier;
+    public int starPointCost;
+    public float currentTotalStatCount;
+    public float buffTime; // 0 kalýcý olarak ekler
+
 }
 
 

@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using static AbilityStatsAdaptor;
 
 public class AbilityManager : MonoBehaviour
 {
@@ -61,28 +60,35 @@ public class AbilityManager : MonoBehaviour
         {
             defenceButtons.Add(item);
         }
-
     }
 
     void SetAllAbilities()
     {
         int attack_index = 0;
         int defence_index = 0;
-        foreach (var item in AllAbilities)
+        GameObject abilitiesParent = new()
         {
-            if (item.Ability_.Type == AbilityType.Attack)
+            name = "Abilities_Parent"
+        };
+        abilitiesParent.transform.parent = transform;
+        for (int i = 0; i < AllAbilities.Count; i++)
+        {
+            AbilityBehaviour ab_behaviour = Instantiate(AllAbilities[i], parent: abilitiesParent.transform);
+            AllAbilities.RemoveAt(i);
+            AllAbilities.Insert(i, ab_behaviour);
+            if (ab_behaviour.Ability_.Type == AbilityType.Attack)
             {
-                item.Ability_.abButton = attackButtons[attack_index].GetComponent<ButtonAbility>();
-                SetButon(item);
-                RefreshButon(item);
+                ab_behaviour.Ability_.abButton = attackButtons[attack_index].GetComponent<ButtonAbility>();
+                SetButon(ab_behaviour);
+                RefreshButon(ab_behaviour);
                 attack_index++;
             }
-            else if (item.Ability_.Type == AbilityType.Defence)
+            else if (ab_behaviour.Ability_.Type == AbilityType.Defence)
             {
 
-                item.Ability_.abButton = defenceButtons[defence_index].GetComponent<ButtonAbility>();
-                SetButon(item);
-                RefreshButon(item);
+                ab_behaviour.Ability_.abButton = defenceButtons[defence_index].GetComponent<ButtonAbility>();
+                SetButon(ab_behaviour);
+                RefreshButon(ab_behaviour);
                 defence_index++;
             }
         }
@@ -148,13 +154,11 @@ public class AbilityManager : MonoBehaviour
 
     void SetButon(AbilityBehaviour abilityBehaviour)
     {
-
-        abilityBehaviour.Ability_.abButton.SetButonListeners(abilityBehaviour, () => OnAdaptorTrigger(abilityBehaviour.Ability_.AdaptorArg));
+        abilityBehaviour.Ability_.abButton.SetButonListeners(abilityBehaviour, () => OnAdaptorTrigger(abilityBehaviour.Ability_));
     }
 
-    void OnAdaptorTrigger(AbilityToStatArgs args)
+    void OnAdaptorTrigger(Ability ab_args)
     {
-        adaptor.AgilityTrigger(this, args);
+        adaptor.AgilityTrigger(this, new AbilityToStatArgs(ab_args));
     }
-
 }
